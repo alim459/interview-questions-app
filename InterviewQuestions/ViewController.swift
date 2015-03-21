@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var bank = QuestionBank()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var questionDisplayLabel: UILabel!
 
+    @IBAction func nextQuestionButton(sender: UIButton) {
+        
+   
+        questionDisplayLabel.text = bank.getNextQuestion().question
+        
+        
+        
+        
+    }
 }
 

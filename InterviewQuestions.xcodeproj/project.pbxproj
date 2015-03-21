@@ -13,6 +13,8 @@
 		15D34BB91ABD898000848AE7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D34BB81ABD898000848AE7 /* Images.xcassets */; };
 		15D34BBC1ABD898000848AE7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15D34BBA1ABD898000848AE7 /* LaunchScreen.xib */; };
 		15D34BC81ABD898000848AE7 /* InterviewQuestionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D34BC71ABD898000848AE7 /* InterviewQuestionsTests.swift */; };
+		15D34BD21ABD89AB00848AE7 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D34BD11ABD89AB00848AE7 /* QuestionBank.swift */; };
+		15D34BD41ABE03B500848AE7 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D34BD31ABE03B500848AE7 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		15D34BC11ABD898000848AE7 /* InterviewQuestionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterviewQuestionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D34BC61ABD898000848AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15D34BC71ABD898000848AE7 /* InterviewQuestionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterviewQuestionsTests.swift; sourceTree = "<group>"; };
+		15D34BD11ABD89AB00848AE7 /* QuestionBank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		15D34BD31ABE03B500848AE7 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				15D34BB51ABD898000848AE7 /* Main.storyboard */,
 				15D34BB81ABD898000848AE7 /* Images.xcassets */,
 				15D34BBA1ABD898000848AE7 /* LaunchScreen.xib */,
+				15D34BD11ABD89AB00848AE7 /* QuestionBank.swift */,
+				15D34BD31ABE03B500848AE7 /* Question.swift */,
 				15D34BAF1ABD898000848AE7 /* Supporting Files */,
 			);
 			path = InterviewQuestions;
@@ -161,9 +167,11 @@
 				TargetAttributes = {
 					15D34BAB1ABD898000848AE7 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = TFCZGGL7N9;
 					};
 					15D34BC01ABD898000848AE7 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = TFCZGGL7N9;
 						TestTargetID = 15D34BAB1ABD898000848AE7;
 					};
 				};
@@ -213,7 +221,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				15D34BB41ABD898000848AE7 /* ViewController.swift in Sources */,
+				15D34BD41ABE03B500848AE7 /* Question.swift in Sources */,
 				15D34BB21ABD898000848AE7 /* AppDelegate.swift in Sources */,
+				15D34BD21ABD89AB00848AE7 /* QuestionBank.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +366,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -367,6 +379,7 @@
 				INFOPLIST_FILE = InterviewQuestionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InterviewQuestions.app/InterviewQuestions";
 			};
 			name = Debug;
@@ -375,6 +388,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -382,6 +397,7 @@
 				INFOPLIST_FILE = InterviewQuestionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InterviewQuestions.app/InterviewQuestions";
 			};
 			name = Release;
