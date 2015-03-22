@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         counter = counter + 1
         var currentQuestion = bank.questionList[counter % bank.questionList.count].question
-        questionDisplayLabel.text = currentQuestion
+        questionDisplayLabel.text = currentQuestion // is this change added?
 
         
     }
