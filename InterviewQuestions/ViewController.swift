@@ -10,8 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var bank = QuestionBank()
+    let bank = QuestionBank()
+    var counter = 0
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,13 +28,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var questionDisplayLabel: UILabel!
 
     @IBAction func nextQuestionButton(sender: UIButton) {
+ 
         
-   
-        questionDisplayLabel.text = bank.getNextQuestion().question
+        counter = counter + 1
+        var currentQuestion = bank.questionList[counter % bank.questionList.count].question
+        questionDisplayLabel.text = currentQuestion
+
         
-        
-        
-        
+    }
+    
+    
+    @IBAction func showAnswerButton(sender: UIButton) {
+        questionDisplayLabel.text = bank.questionList[counter % bank.questionList.count].answer
+ 
+
     }
 }
 
