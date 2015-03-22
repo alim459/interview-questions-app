@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         counter = counter + 1
         var currentQuestion = bank.questionList[counter % bank.questionList.count].question
-        questionDisplayLabel.text = currentQuestion // i made this change at 1:57. Was it added to the repositroy?
+        questionDisplayLabel.text = currentQuestion // i made this change at 2:11pm. Checking to see if it was added to the repo
         
 
         
