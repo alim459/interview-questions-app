@@ -32,7 +32,8 @@ class ViewController: UIViewController {
         
         counter = counter + 1
         var currentQuestion = bank.questionList[counter % bank.questionList.count].question
-        questionDisplayLabel.text = currentQuestion // is this change added?
+        questionDisplayLabel.text = currentQuestion // i made this change at 1:57. Was it added to the repositroy?
+        
 
         
     }
